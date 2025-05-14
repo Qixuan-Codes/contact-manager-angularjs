@@ -1,0 +1,35 @@
+<h2>Edit Contact</h2>
+<form name="editForm" ng-submit="editContact()" novalidate>
+    <div class="form-group">
+        <label>Name:</label>
+        <input type="text" name="name" ng-model="contact.name" ng-required="true"
+            ng-class="{'invalid': editForm.name.$touched && editForm.name.$invalid, 'valid': editForm.name.$touched && editForm.name.$valid}">
+        <span class="error" ng-show="editForm.name.$touched && editForm.name.$invalid">Name is required.</span>
+    </div>
+
+    <div class="form-group">
+        <label>Email:</label>
+        <input type="email" name="email" ng-model="contact.email" ng-required="true"
+            ng-class="{'invalid': editForm.email.$touched && editForm.email.$invalid, 'valid': editForm.email.$touched && editForm.email.$valid}">
+        <span class="error" ng-show="editForm.email.$touched && editForm.email.$invalid">Enter a valid email.</span>
+    </div>
+
+    <div class="form-group">
+        <label>Phone:</label>
+        <input type="number" name="phone" ng-model="contact.phone" ng-required="true"
+            ng-class="{'invalid': editForm.phone.$touched && editForm.phone.$invalid, 'valid': editForm.phone.$touched && editForm.phone.$valid}">
+        <span class="error" ng-show="editForm.phone.$touched && editForm.phone.$invalid">Phone is required.</span>
+    </div>
+
+    <div class="form-group">
+        <label>Category:</label>
+        <select ng-model="contact.category" class="form-select" ng-required="true">
+            <option value="Family">Family</option>
+            <option value="Friends">Friends</option>
+            <option value="Work">Work</option>
+            <option value="Others">Others</option>
+        </select>
+    </div>
+
+    <button type="submit" ng-disabled="editForm.$invalid">Update</button>
+</form>
