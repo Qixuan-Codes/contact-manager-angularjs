@@ -79,7 +79,7 @@ Alternatively, use the Live Server extension in VSCode for best experience.
 
 ## 📝 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available.
 
 ---
 
